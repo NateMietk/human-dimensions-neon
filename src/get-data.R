@@ -59,8 +59,8 @@ mos_co2_traps_validation <- get_mosiquito_data(dp_id='DP1.10043.001',
                                                variable_name='_validation')
 
 mos_pathogen_pooling <- get_mosiquito_data(dp_id='DP1.10041.001', 
-                                   variable_name='pathogenpooling')
+                                           variable_name='pathogenpooling')
 mos_pathogen_results <- get_mosiquito_data(dp_id='DP1.10041.001', 
-                                               variable_name='pathogenresults')
+                                           variable_name='pathogenresults')
 mos_pathogen_validation<- get_mosiquito_data(dp_id='DP1.10041.001', 
-                                           variable_name='v')
+                                             variable_name='validation')
