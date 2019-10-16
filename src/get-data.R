@@ -55,6 +55,8 @@ get_mosiquito_data <- function(dp_id, variable_name) {
 
 mos_co2_traps <- get_mosiquito_data(dp_id='DP1.10043.001', 
                                     variable_name='trapping')
+mos_co2_traps_sorting <- get_mosiquito_data(dp_id='DP1.10043.001', 
+                                               variable_name='sorting')
 mos_co2_traps_validation <- get_mosiquito_data(dp_id='DP1.10043.001', 
                                                variable_name='validation')
 
