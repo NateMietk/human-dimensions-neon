@@ -25,7 +25,7 @@ cl <- parallel::makeCluster(getOption("cl.cores", parallel::detectCores()))
 on.exit(parallel::stopCluster(cl))
 
 # Main function
-files <- pblapply(file_list, function(x) {
+files <- do.call(rbind, pblapply(file_list, function(x) {
   
   # Packages needed to be pushed to each core for parallel processing
   packages <- c('tidyverse', 'neonUtilities', 'httr', 'jsonlite', 'devtools', 'downloader', 'geoNEON', 'janitor', 'pbapply')
@@ -48,4 +48,4 @@ files <- pblapply(file_list, function(x) {
       }
   , 
 cl=cl
-)
+))
