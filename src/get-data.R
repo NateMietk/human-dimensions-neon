@@ -58,14 +58,13 @@ get_mosiquito_data <- function(dp_id, variable_name) {
     )
   file_out <- file_out[file_out != "NULL"]
   # Bind all list elements into one dataframe for output
-  file_out <- bind_rows(file_out)
+  file_out <- do.call(rbind, file_out)
   }
 
 # Get the data for the C02 Trapping
 mos_co2_traps <- get_mosiquito_data(dp_id='DP1.10043.001', variable_name='trapping')
 mos_co2_traps_sorting <- get_mosiquito_data(dp_id='DP1.10043.001', variable_name='sorting')
 mos_co2_traps_taxonomist <- get_mosiquito_data(dp_id='DP1.10043.001', variable_name='TaxonomistIDProcessed')
-
 mos_co2_traps_validation <- get_mosiquito_data(dp_id='DP1.10043.001', variable_name='validation')
 
 # Get the data for mosiquto pathogens
