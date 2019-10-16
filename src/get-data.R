@@ -8,7 +8,7 @@
 # To install geoNEON
 # devtools::install_github("NEONScience/NEON-geolocation/geoNEON")
 
-packages <- c('tidyverse', 'neonUtilities', 'httr', 'jsonlite', 'devtools', 'downloader', 'geoNEON', 'janitor', 'pbapply')
+packages <- c('tidyverse', 'neonUtilities', 'httr', 'jsonlite', 'devtools', 'downloader', 'geoNEON', 'janitor', 'pbapply', 'sf')
 invisible(lapply(packages, library, character.only = TRUE, quietly = TRUE))
 
 # Spin-up for parallel processing
